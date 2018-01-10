@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Calender+Timetable</string>
+    <string name="title_add">Add Event</string>
+    <string name="title_list">Greetings</string>
+    <string name="switchmode1">Time Table</string>
+    <string name="switchmode2">Calender</string>
+    <string name="title_activity_main">Calender+Timetable</string>
+    <string name="title_activity_main__time_table">Calender+Timetable</string>
+    <string name="title_activity_main__add_events">Back</string>
+    <string name="addevent">Add</string>
+    <string name="count_that_event">Count this Event</string>
+    <string name="description">Description :</string>
+    <string name="event_title">Event Title :</string>
+    <string name="start_date">Start Date :</string>
+    <string name="start_time">Start Time :</string>
+    <string name="end_date">End Date :</string>
+    <string name="end_time">End Time :</string>
+    <string name="eventtitle">Title</string>
+    <string name="starttime">0 : 0</string>
+    <string name="endtime">0 : 0</string>
+    <string name="startdate">yyyy-mm-dd</string>
+    <string name="enddate">yyyy-mm-dd</string>
+    <string name="event_color">Event Color :</string>
+    <string name="pick_notifications">No Notifications</string>
+    <string name="notification">Notification :</string>
+    <string name="ensure_color">OK</string>
+    <string name="repeat_pick">Repeat :</string>
+    <string name="repeatway">Never</string>
+    <string name="updateevent">Update</string>
+    <string name="deleteevent">Delete</string>
+    <string name="textview1">Event Title</string>
+    <string name="textview2">hh : mm - hh : mm</string>
+    <string name="textview3">cc</string>
+
+</resources>

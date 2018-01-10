@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shengze3322vs.year.MainActivity_TimeTable">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="53.0dip"
+                android:background="#FFF"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_prev_week"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:gravity="right|center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/left_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+                        android:duplicateParentState="true"
+                        android:text=""
+                        android:textSize="16.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:gravity="left|center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/lastweek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="Last Week"
+                        android:textColor="#000"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tv_markDateOfTheWeek"
+                        android:gravity="center"
+                        android:text="yyyy-mm-dd\nto\nyyyy-mm-dd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:gravity="right|center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/nextweek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:text="Next Week"
+                        android:textColor="#000"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_next_week"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:gravity="left|center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/right_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_keyboard_arrow_right_black_24dp"
+                        android:duplicateParentState="true"
+                        android:text=""
+                        android:textSize="16.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="22.0dip"
+                android:background="#f4f1a1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent" />
+
+                <com.shengze3322vs.year.MyHorizontalScrollView
+                    android:id="@+id/sc_title"
+                    android:scrollbars="none"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                </com.shengze3322vs.year.MyHorizontalScrollView>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_left"
+                        android:orientation="vertical"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                    </LinearLayout>
+
+                    <com.shengze3322vs.year.MyHorizontalScrollView
+                        android:id="@+id/sc_data"
+                        android:layout_toRightOf="@id/ll_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_data"
+                            android:clickable="true"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="2160dp">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:clickable="true"
+                                android:orientation="vertical"
+                                android:id="@+id/time_table_col0">
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:clickable="true"
+                                android:orientation="vertical"
+                                android:id="@+id/time_table_col1">
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:clickable="true"
+                                android:orientation="vertical"
+                                android:id="@+id/time_table_col2">
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:clickable="true"
+                                android:orientation="vertical"
+                                android:id="@+id/time_table_col3">
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:clickable="true"
+                                android:orientation="vertical"
+                                android:id="@+id/time_table_col4">
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:clickable="true"
+                                android:orientation="vertical"
+                                android:id="@+id/time_table_col5">
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:clickable="true"
+                                android:orientation="vertical"
+                                android:id="@+id/time_table_col6">
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </com.shengze3322vs.year.MyHorizontalScrollView>
+                </RelativeLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</LinearLayout>
